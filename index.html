@@ -12,20 +12,20 @@
       padding: 0;
       line-height: 1.6;
       color: #333;
-      background: #fff;
+      background: #ffffff;
     }
     header {
       position: relative;
       padding: 2rem;
       color: white;
-      text-align: center;
+      text-align: left;
       overflow: hidden;
     }
     .header-bg {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background: url('header_bg.jpeg') no-repeat center center/cover;
-      opacity: 0.4;
+      opacity: 0.8;
       z-index: -1;
     }
     header h1,
@@ -82,28 +82,47 @@
       box-shadow: 0 0 5px rgb(0 0 0 / 0.05);
     }
     footer {
-      background: #f5f5f5;
-      padding: 1rem 2rem;
-      text-align: center;
-      margin-top: 2rem;
-    }
+  position: relative;
+  background: transparent;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: white; /* white text for contrast */
+  overflow: hidden;
+}
+
+footer .footer-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('header_bg.jpeg') no-repeat center center/cover;
+  opacity: 0.7; /* match header opacity */
+  z-index: -1;
+}
     .logos img {
       max-height: 50px;
       margin: 0.5rem;
       vertical-align: middle;
     }
+    .logo {
+        height: 150px; /* smaller height */
+        width: auto;  /* maintain aspect ratio */
+        display: block;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Jamal Nazrul Islam Memorial Winter School 2025</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#program">Program</a>
-      <a href="#participants">Participants</a>
-      <a href="#sponsors">Sponsors</a>
-    </nav>
+<header>
+  <div class="header-bg"></div>
+  <div class="header-content">
+    <img src="JNI-logo-white.PNG" alt="School Logo" class="logo" />
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#program">Program</a>
+    <a href="#jni">Professor Jamal Nazrul Islam</a>
+    <a href="#participants">Participants</a>
+    <a href="#sponsors">Sponsors</a>
+  </nav>
   </header>
 
   <section id="about">
@@ -150,7 +169,7 @@
     <div class="grid">
       <div class="card">
         <h4>General Relativity and Cosmology</h4>
-        <p><strong>Lecturer:</strong> Sayeda Tashnuba Jahan</p>
+        <p><strong>Lecturer:</strong> Sayeda Tashnuba Jahan (BRAC University)</p>
         <p><strong>Lecture Notes:</strong></p>
         <ul>
           <li><a href="notes/sayeda_gr_cosmology.pdf">Session Notes</a></li>
@@ -162,8 +181,8 @@
         </ul>
       </div>
       <div class="card">
-        <h4>Quantum Field Theory</h4>
-        <p><strong>Lecturer:</strong> Dr. Shadman Salam</p>
+        <h4>Quantum Field Theory and Standard Model</h4>
+        <p><strong>Lecturer:</strong> Dr. Shadman Salam (BRAC University)</p>
         <p><strong>Lecture Notes:</strong></p>
         <ul>
           <li><a href="notes/shadman_qft.pdf">Session Notes</a></li>
@@ -175,21 +194,10 @@
         </ul>
       </div>
       <div class="card">
-        <h4>Standard Model</h4>
-        <p><strong>Lecturer:</strong> Dr. Shadman Salam</p>
-        <p><strong>Lecture Notes:</strong></p>
-        <ul>
-          <li><a href="notes/shadman_sm.pdf">Session Notes</a></li>
-        </ul>
-        <p><strong>Lecture Videos:</strong></p>
-        <ul>
-          <li><a href="https://video.link/shadman_sm_s1">Session 1</a></li>
-          <li><a href="https://video.link/shadman_sm_s2">Session 2</a></li>
-        </ul>
-      </div>
+    
       <div class="card">
         <h4>Geometry and Topology in Physics</h4>
-        <p><strong>Lecturer:</strong> Md. Rafsanjany Jim</p>
+        <p><strong>Lecturer:</strong> Md. Rafsanjany Jim (BRAC University)</p>
         <p><strong>Lecture Notes:</strong></p>
         <ul>
           <li><a href="notes/rafsanjany_geometry_topology.pdf">Session Notes</a></li>
@@ -202,7 +210,7 @@
       </div>
       <div class="card">
         <h4>Introduction to String Theory</h4>
-        <p><strong>Topic:</strong> Basics of String Theory</p>
+        <p><strong>Lecturer:</strong> Ahmed Rakin Kamal (Masaryk University, Czech Republic)</p>
         <p><strong>Lecture Notes:</strong></p>
         <ul>
           <li><a href="notes/string_intro.pdf">Session Notes</a></li>
@@ -215,7 +223,7 @@
       </div>
       <div class="card">
         <h4>String Theory and Compactification</h4>
-        <p><strong>Lecturers:</strong> Mir Mehedi Faruk &amp; Ahmed Rakin Kamal</p>
+        <p><strong>Lecturers:</strong> Mir Mehedi Faruk (McGill University)</p>
         <p><strong>Lecture Notes:</strong></p>
         <ul>
           <li><a href="notes/faruk_rakin_compactification.pdf">Session Notes</a></li>
@@ -228,7 +236,7 @@
       </div>
       <div class="card">
         <h4>Black Hole Geometry & Thermodynamics</h4>
-        <p><strong>Lecturer:</strong> Prof. Mahbub Majumdar</p>
+        <p><strong>Lecturer:</strong> Prof. Mahbub Majumdar (BRAC University)</p>
         <p><strong>Lecture Notes:</strong></p>
         <ul>
           <li><a href="notes/majumdar_black_hole.pdf">Session Notes</a></li>
@@ -245,8 +253,10 @@
     <div class="grid">
       <div class="card">
         <h4>Cosmology and String Theory</h4>
+        <p><em>String Compactification, Overview of Cosmology</em></p>
+        
         <p><strong>Lecturer:</strong> Prof. Michele Cicoli (University of Bologna, Italy)</p>
-        <p><em>String Compactification; Overview of Cosmology</em></p>
+       
         <p>Prof. Michele Cicoli is a Full Professor in the Department of Physics and Astronomy "Augusto Righi" at the University of Bologna, specializing in string theory and its phenomenological implications. Since 2017, he has served as the local coordinator of the INFN research group on String Theory & Fundamental Interactions (ST&amp;FI).</p>
         <p><strong>Lecture Notes:</strong></p>
         <ul>
@@ -258,6 +268,7 @@
           <li><a href="https://video.link/cicoli_string_s2">Session 2</a></li>
         </ul>
       </div>
+
       <div class="card">
         <h4>Black Holes in String Theory</h4>
         <p><strong>Lecturer:</strong> Prof. Ashoke Sen (ICTS, India)</p>
@@ -339,7 +350,6 @@
         <li>MD. Samiul Ehsan (Shahjalal University of Science and Technology)</li>
         <li>Muntasir Ibne Shams (University of Dhaka)</li>
         <li>Raziul Islam (BRAC University)</li>
-        <li>S M Masruk Uddin</li>
         <li>Sadat Husain (BRAC University)</li>
         <li>Shanto Chakroborty (BRAC University)</li>
         <li>Sirajush Salekin (BRAC University)</li>
@@ -375,14 +385,24 @@
   </section>
 
   <footer id="sponsors">
-    <h2>Sponsors &amp; Collaborators</h2>
+    <div class="footer-bg"></div>
+    <h2>Sponsors</h2>
     <div class="logos">
-      <img src="logos/sponsor1.png" alt="Sponsor 1">
-      <img src="logos/sponsor2.png" alt="Sponsor 2">
-      <img src="logos/collaborator1.png" alt="Collaborator 1">
-      <!-- more logos -->
+      <img src="sponsor_logos/abdul_monem.png" alt="Sponsor 1">
+      <img src="sponsor_logos/bKash Logo English.ai.png" alt="Sponsor 4">
+      <img src="sponsor_logos/prg_group_logo.png" alt="Sponsor 2">
+      <img src="sponsor_logos/ACI Premio Plastics Logo.png" alt="Sponsor 3">
+    <img src="sponsor_logos/Savlon.png" alt="Sponsor 5">
+      
+     
     </div>
-    <p>&copy; 2025 Winter School Organizing Committee</p>
+    <h2>Organizers</h2>
+    <div class="logos">
+      <img src="bracu_logo.png" alt="Collaborator 1">
+      <img src="New_logo_PWF_white.png" alt="Collaborator 2">
+      <img src="physics-for-bangladesh-logo.png" alt="Collaborator 3">   
+    </div>
+    <p>&copy; 2025 JNI Winter School Organizing Committee</p>
   </footer>
 </body>
 </html>
