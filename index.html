@@ -18,7 +18,7 @@
     header {
       position: relative;
       padding: 2rem;
-      color: white;
+      color: #333;
       text-align: left;
       overflow: hidden;
     }
@@ -26,7 +26,7 @@
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background: url('header_bg.jpeg') no-repeat center center/cover;
-      opacity: 0.8;
+      opacity: 0.4;
       z-index: -1;
     }
     header h1,
@@ -41,7 +41,7 @@
     }
     header .subtitle {
       font-style: italic;
-      color: #ddd;
+      color: #333;
       margin-top: 0.5rem;
       margin-bottom: 1rem;
       font-size: 1.25rem;
@@ -50,7 +50,7 @@
       margin-top: 1rem;
     }
     nav a {
-      color: white;
+      color: #333;
       margin-right: 1rem;
       text-decoration: none;
       font-weight: bold;
@@ -98,13 +98,23 @@ footer .footer-bg {
   opacity: 0.7; /* match header opacity */
   z-index: -1;
 }
-    .logos img {
-      max-height: 50px;
+    .logos1 img {
+      max-height: 40px;
+      margin: 0.5rem;
+      vertical-align: middle;
+      background: white;     /* White background behind logos */
+      padding: 0.5rem;         /* Some padding around logos */
+      border-radius: 6px;    /* Optional: rounded corners */
+      display: inline-block; /* Shrinks to fit logos */
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    }
+    .logos2 img {
+      max-height: 70px;
       margin: 0.5rem;
       vertical-align: middle;
     }
     .logo {
-        height: 150px; /* smaller height */
+        height: 200px; /* smaller height */
         width: auto;  /* maintain aspect ratio */
         display: block;
     }
@@ -115,7 +125,7 @@ footer .footer-bg {
 <header>
   <div class="header-bg"></div>
   <div class="header-content">
-    <img src="jni-logo-white.png" alt="School Logo" class="logo" />
+    <img src="jni-logo-black.png" alt="School Logo" class="logo" />
   </div>
   <nav>
     <a href="#about">About</a>
@@ -392,7 +402,7 @@ footer .footer-bg {
   <footer id="sponsors">
     <div class="footer-bg"></div>
     <h2>Sponsors</h2>
-    <div class="logos">
+    <div class="logos1">
       <img src="abdul_monem.png" alt="Sponsor 1">
       <img src="bKash Logo English.ai.png" alt="Sponsor 4">
       <img src="prg_group_logo.png" alt="Sponsor 2">
@@ -402,7 +412,7 @@ footer .footer-bg {
      
     </div>
     <h2>Organizers</h2>
-    <div class="logos">
+    <div class="logos2">
       <img src="bracu_logo.png" alt="Collaborator 1">
       <img src="New_logo_PWF_white.png" alt="Collaborator 2">
       <img src="physics-for-bangladesh-logo.png" alt="Collaborator 3">   
