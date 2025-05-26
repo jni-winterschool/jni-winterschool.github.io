@@ -159,6 +159,75 @@ footer .footer-bg {
         width: auto;  /* maintain aspect ratio */
         display: block;
     }
+
+    #press-coverage {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#press-coverage h2 {
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#press-coverage ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+#press-coverage ul li {
+  margin-bottom: 0.5rem;
+}
+
+#press-coverage ul li a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+#press-coverage ul li a:hover,
+#press-coverage ul li a:focus {
+  text-decoration: underline;
+}
+
+
+    #photo-gallery {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+#photo-gallery h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#photo-gallery p a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#photo-gallery p a:hover,
+#photo-gallery p a:focus {
+  text-decoration: underline;
+}
+
+.group-photo-container {
+  margin-top: 1rem;
+}
+
+.group-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
   </style>
 </head>
 <body>
@@ -170,9 +239,11 @@ footer .footer-bg {
   </div>
   <nav>
     <a href="#about">About</a>
-    <a href="#program">Program</a>
     <a href="#jamal">Professor Jamal Nazrul Islam</a>
+    <a href="#program">Program</a>
     <a href="#participants">Participants</a>
+    <a href="#press">Media Coverage</a>
+    <a href="#photo-gallery">Photo Gallery</a>
     <a href="#sponsors">Sponsors</a>
   </nav>
   </header>
@@ -439,6 +510,32 @@ footer .footer-bg {
       </ul>
     </div>
   </section>
+
+  <section id="press">
+  <h2>Media Coverage</h2>
+  <ul>
+    <li><a href="https://www.prothomalo.com/amp/story/technology/science/cx84484ntd" target="_blank" rel="noopener">পদার্থবিজ্ঞানের মৌলিক ও তাত্ত্বিক বিষয় জানাতে কর্মশালা | Prothom Alo</a></li>
+    <li><a href="https://youtu.be/3Ec3uXqazkk?si=0hmiSyYS0ry72qa6" target="_blank" rel="noopener">বাংলাদেশে বিজ্ঞান চর্চা ও জামাল নজরুল ইসলাম |  Jamuna TV</a></li>
+    <li><a href="https://www.dhakatribune.com/bangladesh/education/370558/sds-organises-jamal-nazrul-islam-memorial-winter" target="_blank" rel="noopener">SDS organises Jamal Nazrul Islam Memorial Winter School 2025 | Dhaka Tribune</a></li>
+    <li><a href="https://bracuexpress.com/a-journey-of-excellence-in-conversation-with-dean-mahbub-majumdar/" target="_blank" rel="noopener">A journey of excellence: In Conversation with Dean Mahbub Majumdar | BracU Express</a></li>
+  
+    <!-- Add more media links here -->
+  </ul>
+</section>
+
+<section id="photos">
+  <h2>Photo Gallery</h2>
+  <div class="group-photo-container">
+    <img src="group-photo.jpg" alt="Group Photo" class="group-photo" />
+  </div>
+  <p>
+    View the full photo album on
+    <a href="https://drive.google.com/drive/folders/your-folder-id" target="_blank" rel="noopener">
+      Google Drive
+    </a>.
+  </p>
+</section>
+
 
   <footer id="sponsors">
     <div class="footer-bg"></div>
