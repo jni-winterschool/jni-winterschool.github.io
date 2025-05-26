@@ -81,7 +81,7 @@ header nav {
 nav a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -226,6 +226,43 @@ footer .footer-bg {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  /* Logo rescaling for mobile */
+  .logo {
+    height: 80px;  /* smaller logo on mobile */
+  }
+
+  /* Centering header text for mobile */
+  .header-text {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* smaller header font */
+  }
+
+  header .subtitle {
+    font-size: 1rem; /* smaller subtitle font */
+  }
+
+  /* Navigation adjustments for mobile */
+  header nav {
+    flex-direction: column;  /* stack nav links vertically */
+    gap: 1rem;               /* space out vertically */
+  }
+
+  header nav a {
+    font-size: 0.75rem;        /* slightly larger font for mobile */
+    text-align: center;       /* center text in mobile view */
+  }
+
+  /* Section title adjustments for mobile */
+  section h2, section h3 {
+    font-size: 1.5rem;  /* slightly smaller titles */
+  }
 }
 
   </style>
@@ -523,7 +560,7 @@ footer .footer-bg {
   </ul>
 </section>
 
-<section id="photos">
+<section id="photo-gallery">
   <h2>Photo Gallery</h2>
   <div class="group-photo-container">
     <img src="group-photo.jpg" alt="Group Photo" class="group-photo" />
