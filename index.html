@@ -8,81 +8,122 @@
   <style>
     /* Minimal styling */
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-      background: #ffffff;
-    }
-    header {
-      position: relative;
-      padding: 2rem;
-      color: #333;
-      text-align: left;
-      overflow: hidden;
-    }
-    .header-bg {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('header_bg.jpeg') no-repeat center center/cover;
-      opacity: 0.4;
-      z-index: -1;
-    }
-    header h1,
-    header .subtitle,
-    header nav a {
-      position: relative;
-      z-index: 1;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header .subtitle {
-      font-style: italic;
-      color: #333;
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
-      font-size: 1.25rem;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
-      color: #333;
-      margin-right: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.5rem;
-    }
-    h3 {
-      margin-top: 1.5rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-    .card {
-      background: #fafafa;
-      padding: 1rem;
-      border: 1px solid #eee;
-      border-radius: 4px;
-      box-shadow: 0 0 5px rgb(0 0 0 / 0.05);
-    }
-    footer {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+/* Header styling */
+header {
+  position: relative;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('header_bg.jpeg') no-repeat center center/cover;
+  opacity: 1;
+  z-index: -1;
+}
+
+/* Header content: logo + text */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.header-text {
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header .subtitle {
+  font-style: italic;
+  color: #ddd;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+/* Navigation centered */
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+/* Section styling */
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2,
+section h3 {
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Grid layout for cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Card styling */
+.card {
+  background: #fafafa;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 0.05);
+}
+
+footer {
   position: relative;
   background: transparent;
   padding: 1rem 2rem;
@@ -95,7 +136,7 @@ footer .footer-bg {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: url('header_bg.jpeg') no-repeat center center/cover;
-  opacity: 0.7; /* match header opacity */
+  opacity: 1; /* match header opacity */
   z-index: -1;
 }
     .logos1 img {
@@ -125,7 +166,7 @@ footer .footer-bg {
 <header>
   <div class="header-bg"></div>
   <div class="header-content">
-    <img src="jni-logo-black.png" alt="School Logo" class="logo" />
+    <img src="jni-logo-white.png" alt="School Logo" class="logo" />
   </div>
   <nav>
     <a href="#about">About</a>
